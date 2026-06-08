@@ -2,11 +2,11 @@
 import { computed } from 'vue'
 import { useRoute, RouterLink } from 'vue-router'
 import { ArrowRight, Phone, Mail, MapPin, Check } from 'lucide-vue-next'
-import { getTeamMemberBySlug, teamMembers } from '@/data/team'
+import { getTeamMemberBySlug, getAllTeamMembers } from '@/data/team'
 
 const route = useRoute()
 const member = computed(() => getTeamMemberBySlug(route.params.slug))
-const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.params.slug).slice(0, 3))
+const otherMembers = computed(() => getAllTeamMembers().filter(m => m.slug !== route.params.slug))
 </script>
 
 <template>
@@ -80,9 +80,14 @@ const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.par
                 </div>
                 <div>
                   <p class="text-sm text-qa-gray">Phone</p>
-                  <a :href="`tel:${member.phone}`" class="font-medium text-qa-blue hover:text-qa-orange transition-colors">
+                  <a
+                    v-if="member.phone !== '-'"
+                    :href="`tel:${member.phone}`"
+                    class="font-medium text-qa-blue hover:text-qa-orange transition-colors"
+                  >
                     {{ member.phone }}
                   </a>
+                  <p v-else class="font-medium text-qa-blue">-</p>
                 </div>
               </div>
               <div class="flex items-start gap-3 sm:col-span-2">
@@ -91,9 +96,14 @@ const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.par
                 </div>
                 <div>
                   <p class="text-sm text-qa-gray">Email</p>
-                  <a :href="`mailto:${member.email}`" class="font-medium text-qa-blue hover:text-qa-orange transition-colors">
+                  <a
+                    v-if="member.email !== '-'"
+                    :href="`mailto:${member.email}`"
+                    class="font-medium text-qa-blue hover:text-qa-orange transition-colors"
+                  >
                     {{ member.email }}
                   </a>
+                  <p v-else class="font-medium text-qa-blue">-</p>
                 </div>
               </div>
             </div>
@@ -117,7 +127,7 @@ const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.par
           </div>
         </div>
 
-        <!-- Experience, Skills & Qualifications -->
+        <!-- Experience & Qualifications -->
         <div class="grid lg:grid-cols-2 gap-12 mt-12">
           <!-- Experience -->
           <div>
@@ -134,45 +144,19 @@ const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.par
             </div>
           </div>
 
-          <!-- Skills & Qualifications -->
-          <div>
-            <!-- Skills -->
-            <div class="mb-12">
-              <h3 class="text-2xl font-serif font-bold text-qa-blue mb-6">Skills</h3>
-              <div class="space-y-6">
-                <div 
-                  v-for="(skill, index) in member.skills" 
-                  :key="index"
-                  class="skill-item"
-                >
-                  <div class="flex items-center justify-between mb-2">
-                    <h4 class="text-base font-bold text-qa-blue">{{ skill.name }}</h4>
-                    <span class="text-base font-bold text-qa-blue">{{ skill.percentage }}%</span>
-                  </div>
-                  <div class="w-full bg-qa-extra rounded-full h-3 overflow-hidden">
-                    <div 
-                      class="bg-qa-orange h-full rounded-full transition-all duration-1000 ease-out"
-                      :style="{ width: `${skill.percentage}%` }"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Qualifications -->
-            <div>
-              <h3 class="text-2xl font-serif font-bold text-qa-blue mb-6">Qualifications</h3>
-              <ul class="space-y-3">
-                <li 
-                  v-for="(qual, index) in member.qualifications" 
-                  :key="index"
-                  class="flex items-start gap-3"
-                >
-                  <div class="w-2 h-2 bg-qa-orange rounded-full mt-2 flex-shrink-0"></div>
-                  <span class="text-qa-orange font-medium">{{ qual }}</span>
-                </li>
-              </ul>
-            </div>
+          <!-- Qualifications -->
+          <div v-if="member.qualifications?.length">
+            <h3 class="text-2xl font-serif font-bold text-qa-blue mb-6">Qualifications</h3>
+            <ul class="space-y-3">
+              <li 
+                v-for="(qual, index) in member.qualifications" 
+                :key="index"
+                class="flex items-start gap-3"
+              >
+                <div class="w-2 h-2 bg-qa-orange rounded-full mt-2 flex-shrink-0"></div>
+                <span class="text-qa-orange font-medium">{{ qual }}</span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -191,7 +175,7 @@ const otherMembers = computed(() => teamMembers.filter(m => m.slug !== route.par
             Other <span class="text-qa-orange italic">Team Members</span>
           </h2>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto justify-items-center">
           <div 
             v-for="m in otherMembers" 
             :key="m.id"

@@ -21,11 +21,6 @@ export const teamMembers = [
         description: `Johnson has since 2010, been teaching Food Safety and HACCP at the Food Science and Nutrition department at the University of Ghana in their Food Safety & HACCP summer training programme, which pulls participants from manufacturing industries across the sub­region, government institutions, hospitals etc. He has also served as the CEO of GS1 Ghana, a company responsible for issuing barcodes to manufacturing and some service clients for an annual fee. In addition to managing QA Consult, he is the Director, Business Development Services at the Association of Ghana Industries.`
       }
     ],
-    skills: [
-      { name: 'Product Development & Innovation', percentage: 80 },
-      { name: 'Leadership & Communication', percentage: 95 },
-      { name: 'Food Safety & Quality Management', percentage: 65 }
-    ],
     qualifications: [
       'BSc. Biological Sciences',
       'MSc. Food Science & Technology',
@@ -52,42 +47,42 @@ export const teamMembers = [
     id: 2,
     slug: 'eunice-opoku-boateng',
     name: 'Eunice Opoku-Boateng',
-    role: 'Chief Operating Officer',
+    role: 'COO / Human Resources Consultant',
     shortRole: 'COO',
     image: '/images/Staff_Images/Mummy.png',
     detailImage: '/images/Staff_Images/Mummy.png',
     phone: '+233 244691674',
     email: 'eunice@qaconsultgh.com',
     address: 'Hydraform Estates, Aviation Highway',
-    bio: `Eunice brings extensive operational expertise to QA Consult Africa. With her strategic vision and management skills, she oversees the day-to-day operations ensuring excellence in service delivery across all consultancy projects.`,
+    bio: `Eunice is an experienced Human Resource Consultant, who supports small and medium-sized enterprises (SMEs) in building effective people management systems and strengthening business operations.`,
     experience: [
       {
-        title: 'Deputy Sales & Circulation Manager',
-        description: `She spent over 15 years of her working life at Business & Financial Times, a leading financial newspaper in Ghana. She was the Personal Assistant to about three different CEOs of B&FT until she was appointed the Deputy Sales & Circulation Manager, a position she handled with excellence.`
+        title: 'Human Resources Consultant',
+        description: `With a strong background in business communications and management, Eunice works closely with SMEs to develop practical HR strategies, implement policies, and enhance organisational performance. She also leads key functions including business development, project execution, human resource management, and client engagement.`
       },
       {
-        title: 'Human Resource Administrator',
-        description: `She was later appointed the Human Resource Administrator, a position that fit squarely into her chosen profession of a Human Resource Professional. She held this role with distinction, working with experienced professionals in the field of HR to develop the Human Resource policies and structures for the business until she resigned to join QA Consult, a company she co­founded in 2010.`
+        title: 'Executive Support, Sales & Human Resource Administration',
+        description: `Eunice brings over two decades of professional experience across executive support, sales, and human resource administration. She has supported senior leadership at executive level and progressed into management roles, gaining hands-on experience in organisational leadership and operations. Her transition into Human Resource Administration 15 years ago allowed her to focus on her core passion, developing HR structures, policies, and systems that support business growth and compliance.`
+      },
+      {
+        title: 'Co-Founder, QA Consult Africa',
+        description: `She co-founded QA Consult Africa in 2010, a firm that provides consultancy and training in Quality Assurance, Health & Safety, Environmental Management Systems, Manufacturing Excellence, Food Safety, HR solutions and advisory services that drive efficiency, compliance, and sustainable growth.`
       }
     ],
-    skills: [
-      { name: 'Legislation', percentage: 80 },
-      { name: 'Cases Success', percentage: 95 },
-      { name: 'Judges Experience', percentage: 65 }
-    ],
     qualifications: [
-      'Bachelor of Business in Administration',
-      'MSc. Food Science & Technology',
-      'Certificate – Basics in Supply Chain Management (APICS)'
+      'Bachelor of Business Administration – University of Business & International Studies, Geneva, Switzerland',
+      'International Diploma in Human Resource/Personnel Management and Communication in Business Management – Cambridge International College, United Kingdom'
     ],
     expertise: [
-      'Human Resource',
-      'Training Management',
-      'Business Registration',
-      'Procurement',
+      'Human Resource Management',
+      'SME Advisory',
+      'HR Policy Development',
+      'Business Development',
+      'Project Execution',
+      'Client Engagement',
+      'Organisational Performance',
       'Business Operations',
-      'Client Management',
-      'Regulatory Affairs'
+      'HR Solutions'
     ],
     social: {
       linkedin: '#',
@@ -97,142 +92,6 @@ export const teamMembers = [
   },
   {
     id: 3,
-    slug: 'michael-baidoo',
-    name: 'Michael Baidoo',
-    role: 'Quality and Food Safety Manager',
-    shortRole: 'QFS Manager',
-    image: '/images/Staff_Images/Michael.png',
-    detailImage: '/images/Staff_Images/Michael.png',
-    phone: '+233 244691674',
-    email: 'michael@qaconsultgh.com',
-    address: 'Hydraform Estates, Aviation Highway',
-    bio: `Michael is a seasoned Quality and Food Safety professional with extensive experience in the food manufacturing industry. He specializes in HACCP implementation, food safety audits, and quality management systems.`,
-    experience: [
-      {
-        title: 'Food Safety Lead',
-        description: `Michael worked as a Standards Officer at the Ghana Standards Authority where he drafted and revised national standards and adopted/adapted international standards for different industries in the country. He is well vested in systems approach and documentation processes.`
-      },
-      {
-        title: 'Quality Control Supervisor',
-        description: `Michael then worked as a Quality Control Supervisor at Twellium industrial company Limited, which is an award-winning Food Manufacturing Company where he monitored and coordinated all production activities to ensure that production lines run smoothly and generated a consistently suitable output of products that meet quality standards. Having worked both at the regulatory and industrial sectors, Michael has gained vital experience in standards development and implementation and the need to streamline business processes in the various industries.`
-      }
-    ],
-    expertise: [
-      'Quality Control',
-      'ISO Management Systems Audit',
-      'Manufacturing Hygiene',
-      'FSSC 22000',
-      'QMS',
-      'Risk assessment',
-      'HACCP',
-      'ISO Management Systems Docs',
-      'Supply Chain Management'
-    ],
-    skills: [
-      { name: 'Product Development & Innovation', percentage: 80 },
-      { name: 'Leadership & Communication', percentage: 95 },
-      { name: 'Food Safety & Quality Management', percentage: 65 }
-    ],
-    qualifications: [
-      'MSc. Food quality management system',
-      'Certificate – ISO 9001- Internal auditor'
-    ],
-    social: {
-      linkedin: '#',
-      twitter: '#',
-      facebook: '#'
-    }
-  },
-  {
-    id: 4,
-    slug: 'angela-addo',
-    name: 'Angela Addo',
-    role: 'Quality and Food Safety Executive',
-    shortRole: 'QFS Executive',
-    image: '/images/Staff_Images/Angela.png',
-    detailImage: '/images/Staff_Images/Angela.png',
-    phone: '+233 244691674',
-    email: 'angela@qaconsultgh.com',
-    address: 'Hydraform Estates, Aviation Highway',
-    bio: `Angela is a dedicated Quality and Food Safety Executive with a passion for ensuring the highest standards in food production and handling. She works closely with clients to implement effective quality systems.`,
-    experience: [
-      {
-        title: 'QA Consult- Quality / Food Safety Executive',
-        description: `Angela conducts internal audits, regulatory inspections, and training sessions to ensure compliance with food safety and quality standards. She also develops documentation tools and monitoring systems that support client operations and continuous improvement initiatives.`
-      },
-      {
-        title: 'Promasidor- Regulatory & Quality Assurance Officer / Microbiological Analyst',
-        description: `She liaised with regulatory authorities such as FDA and GSA for product registration and license renewals, conducted microbiological and physicochemical analyses, and supported the implementation of quality and hygiene systems across production lines.`
-      },
-      {
-        title: 'Pneuma Food Scientifics – Quality Assurance and Sales Officer',
-        description: `Oversaw production processes to ensure compliance with standards, maintained hygiene protocols, and supported packaging, labeling, and product distribution operations.`
-      },
-      {
-        title: 'Rosa Gardens School – Teacher',
-        description: `Developed teaching and creative skills through student engagement, supervision, and participation in extracurricular activities. She also coordinated classroom projects that fostered teamwork, communication, and creative expression among learners.`
-      }
-    ],
-    expertise: [
-      'Food Safety & Quality Assurance',
-      'Regulatory Compliance',
-      'Microbiological & Physicochemical Analysis'
-    ],
-    skills: [
-      { name: 'Food Safety Management System', percentage: 80 },
-      { name: 'Training delivery', percentage: 95 },
-      { name: 'Ethical and safety-conscious', percentage: 85 }
-    ],
-    qualifications: [
-      'BTech Food Analysis – Accra Technical University',
-      'HND Food Technology – Ho Technical University'
-    ],
-    social: {
-      linkedin: '#',
-      twitter: '#',
-      facebook: '#'
-    }
-  },
-  {
-    id: 5,
-    slug: 'adwoa-profile',
-    name: 'Adwoa',
-    role: 'Consultant',
-    shortRole: 'Consultant',
-    image: '/images/Staff_Images/Adwoa.png',
-    detailImage: '/images/Staff_Images/Adwoa.png',
-    phone: '+233 244691674',
-    email: 'adwoa@qaconsultgh.com',
-    address: 'Hydraform Estates, Aviation Highway',
-    bio: `Adwoa is a skilled consultant bringing fresh perspectives and innovative solutions to quality management challenges.`,
-    experience: [
-      {
-        title: 'Quality Consultant',
-        description: `Adwoa works with diverse clients across multiple industries, providing consultancy services in quality management and process improvement.`
-      }
-    ],
-    expertise: [
-      'Quality Management',
-      'Process Improvement',
-      'Client Consultation',
-      'Documentation'
-    ],
-    skills: [
-      { name: 'Food Safety Management System', percentage: 80 },
-      { name: 'HACCP Implementation Support', percentage: 95 },
-      { name: 'Ethical and safety-conscious', percentage: 85 }
-    ],
-    qualifications: [
-      'BSc. Food Science & Technology (KNUST)'
-    ],
-    social: {
-      linkedin: '#',
-      twitter: '#',
-      facebook: '#'
-    }
-  },
-  {
-    id: 6,
     slug: 'wilson-profile',
     name: 'Wilson',
     role: 'Consultant',
@@ -259,11 +118,6 @@ export const teamMembers = [
       'Analytical and Physical Testing',
       'Process Monitoring & Inspection'
     ],
-    skills: [
-      { name: 'Food Safety Management System', percentage: 80 },
-      { name: 'Training delivery', percentage: 95 },
-      { name: 'Ethical and safety-conscious', percentage: 85 }
-    ],
     qualifications: [
       'Bachelor of Business in Administration',
       'MSc. Food Science & Technology',
@@ -277,6 +131,104 @@ export const teamMembers = [
   }
 ]
 
+export const otherConsultants = [
+  {
+    id: 1,
+    slug: 'samuel-entee',
+    name: 'Samuel Entee',
+    role: 'Food Technologist, Production Manager & Consultant',
+    shortRole: 'Consultant',
+    image: '/images/Staff_Images/SamuelEntee.png',
+    detailImage: '/images/Staff_Images/SamuelEntee.png',
+    phone: '-',
+    email: '-',
+    address: '-',
+    bio: `Samuel Entee is an experienced Food Technologist, Production Manager, Aquaculture Specialist, and Renewable Energy & Circular Economy Consultant with over 18 years of multidisciplinary consulting experience in agro-processing, food safety systems, aquaculture, renewable energy, and sustainable production systems in Ghana.`,
+    experience: [
+      {
+        title: 'Multidisciplinary Consultant',
+        description: `He has successfully led and supported high-impact projects for development organizations, private sector institutions, SMEs, and government bodies, providing expertise in food processing optimization, post-harvest technologies, aquaculture production systems, fish farming advisory services, ISO 9001:2015 and ISO 22000 quality management systems, HACCP implementation, renewable energy integration, agro-waste valorization, and circular economy solutions.`
+      },
+      {
+        title: 'Mentorship & Capacity Building',
+        description: `Samuel is actively engaged in mentorship and capacity-building initiatives, delivering professional training, technical coaching, and skills development for youth, SMEs, farmer groups, women-led enterprises, and institutions in areas including food safety, agribusiness, agro-processing, leadership, aquaculture, and sustainable enterprise development.`
+      },
+      {
+        title: 'Development Partner Collaborations',
+        description: `He has collaborated with organizations including the World Food Programme (WFP), AGI, UNITC, SNV Ghana, GIZ, USAID SFMP, and ISEES, delivering technical advisory services, stakeholder engagement, SOP development, and resource efficiency interventions that enhance productivity, food safety, environmental sustainability, and operational excellence across agricultural and food value chains.`
+      }
+    ],
+    qualifications: [],
+    expertise: [
+      'Food Processing Optimization',
+      'Post-Harvest Technologies',
+      'Aquaculture Production Systems',
+      'ISO 9001:2015 & ISO 22000',
+      'HACCP Implementation',
+      'Renewable Energy Integration',
+      'Agro-Waste Valorization',
+      'Circular Economy Solutions',
+      'Food Safety Systems',
+      'Agribusiness Advisory',
+      'Sustainable Enterprise Development'
+    ],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      facebook: '#'
+    }
+  },
+  {
+    id: 2,
+    slug: 'leticia-donkor',
+    name: 'Leticia Donkor',
+    role: 'Food Scientist & Associate Consultant',
+    shortRole: 'Consultant',
+    image: '/images/Staff_Images/LeticiaDonkor.png',
+    detailImage: '/images/Staff_Images/LeticiaDonkor.png',
+    phone: '-',
+    email: '-',
+    address: '-',
+    bio: `Leticia Donkor is a food scientist and engineer with over a decade of experience spanning research, food manufacturing, food safety, and industry consultancy across Ghana. She holds a Doctor of Philosophy in Food Process Engineering from the University of Ghana, Legon, where her doctoral research applied mathematical modelling and linear programming to the design of nutritious, affordable, and sustainable diets — work that has since been published in leading international journals including Frontiers in Sustainable Food Systems and the International Journal of Food Science and Technology.`,
+    experience: [
+      {
+        title: 'Associate Consultant, QA Consult',
+        description: `Leticia brings a rare combination of academic rigour and hands-on industry experience. She has designed and delivered training programmes for food and beverage SMEs on Food Safety Management Systems, HACCP, ISO/TS 22002-1, supply chain management, and social and environmental sustainability — on projects funded by the FAO, GIZ, and the ITC, in collaboration with the Association of Ghana Industries.`
+      },
+      {
+        title: 'Food Manufacturing & Production Leadership',
+        description: `Her practical understanding of quality assurance in production environments is grounded in managerial roles held at Nestlé Ghana, Voltic Ghana Limited, and Ocean Spring Mineral Water Company, where she led production teams and oversaw KPI performance and continuous improvement activities.`
+      },
+      {
+        title: 'Research & International Project Leadership',
+        description: `Leticia has served as Country Lead for an international passive cooling technology project, coordinating field activities across three regions of Ghana and managing relationships with commercial partners and government stakeholders. She is currently a Postdoctoral Researcher under the OR Tambo Africa Research Chair in Food Science and Technology at the University of Ghana.`
+      }
+    ],
+    qualifications: [
+      'Doctor of Philosophy in Food Process Engineering – University of Ghana, Legon'
+    ],
+    expertise: [
+      'Food Safety Management Systems',
+      'HACCP',
+      'ISO/TS 22002-1',
+      'Supply Chain Management',
+      'Food Manufacturing',
+      'Quality Assurance',
+      'SME Training & Capacity Building',
+      'Social & Environmental Sustainability',
+      'Mathematical Modelling',
+      'Project Management'
+    ],
+    social: {
+      linkedin: '#',
+      twitter: '#',
+      facebook: '#'
+    }
+  }
+]
+
+export const getAllTeamMembers = () => [...teamMembers, ...otherConsultants]
+
 export const getTeamMemberBySlug = (slug) => {
-  return teamMembers.find(member => member.slug === slug)
+  return getAllTeamMembers().find(member => member.slug === slug)
 }
