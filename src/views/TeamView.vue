@@ -67,10 +67,10 @@ import { teamMembers, otherConsultants } from '@/data/team'
 
       <div class="mt-20 text-center">
         <h3 class="text-3xl md:text-4xl font-serif font-bold text-qa-blue">
-          Other <span class="text-qa-orange italic">Consultants</span>
+          Associate <span class="text-qa-orange italic">Consultants</span>
         </h3>
       </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-12">
+      <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto mt-12">
         <div 
           v-for="consultant in otherConsultants" 
           :key="consultant.id"
