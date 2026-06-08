@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { X, Send } from 'lucide-vue-next'
+import { useContactForm } from '@/composables/useContactForm'
 
 defineProps({
   isOpen: Boolean
@@ -14,16 +15,15 @@ const form = ref({
   message: ''
 })
 
-const isSubmitting = ref(false)
+const { isSubmitting, submitStatus, submitMessage, submitContactForm } = useContactForm('Chat Widget')
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  // Simulate form submission
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  alert('Thank you for your message! We will get back to you soon.')
-  form.value = { name: '', email: '', message: '' }
-  isSubmitting.value = false
-  emit('close')
+  const sent = await submitContactForm(form.value)
+
+  if (sent) {
+    form.value = { name: '', email: '', message: '' }
+    emit('close')
+  }
 }
 </script>
 
@@ -86,6 +86,13 @@ const handleSubmit = async () => {
             <span>{{ isSubmitting ? 'Sending...' : 'Submit Now' }}</span>
             <Send v-if="!isSubmitting" class="w-4 h-4" />
           </button>
+          <p
+            v-if="submitMessage"
+            class="text-sm"
+            :class="submitStatus === 'success' ? 'text-green-300' : 'text-red-300'"
+          >
+            {{ submitMessage }}
+          </p>
         </form>
       </div>
     </div>

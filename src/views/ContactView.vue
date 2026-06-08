@@ -2,6 +2,7 @@
 import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-vue-next'
+import { useContactForm } from '@/composables/useContactForm'
 
 const form = ref({
   name: '',
@@ -11,15 +12,14 @@ const form = ref({
   message: ''
 })
 
-const isSubmitting = ref(false)
+const { isSubmitting, submitStatus, submitMessage, submitContactForm } = useContactForm('Contact Page')
 
 const handleSubmit = async () => {
-  isSubmitting.value = true
-  // Simulate form submission
-  await new Promise(resolve => setTimeout(resolve, 1500))
-  alert('Thank you for your message! We will get back to you soon.')
-  form.value = { name: '', email: '', phone: '', subject: '', message: '' }
-  isSubmitting.value = false
+  const sent = await submitContactForm(form.value)
+
+  if (sent) {
+    form.value = { name: '', email: '', phone: '', subject: '', message: '' }
+  }
 }
 </script>
 
@@ -137,6 +137,13 @@ const handleSubmit = async () => {
               <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
               <Send v-if="!isSubmitting" class="w-5 h-5 icon" />
             </button>
+            <p
+              v-if="submitMessage"
+              class="text-sm"
+              :class="submitStatus === 'success' ? 'text-green-600' : 'text-red-600'"
+            >
+              {{ submitMessage }}
+            </p>
           </form>
         </div>
 
