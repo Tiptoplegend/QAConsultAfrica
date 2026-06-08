@@ -150,12 +150,13 @@ const handleSubmit = async () => {
         <!-- Map -->
         <div class="rounded-2xl overflow-hidden shadow-lg h-[500px] lg:h-auto">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.563037741858!2d-0.1740832!3d5.6148378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNcKwMzYnNTMuNCJOIDDCsDEwJzI2LjciVw!5e0!3m2!1sen!2sgh!4v1625000000000!5m2!1sen!2sgh"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.5513558251555!2d-0.1115504!3d5.633037499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf85ff93e1ecaf%3A0xb3c9a8d1b1a1ef61!2sQA%20Consult%20Africa!5e0!3m2!1sen!2sgh!4v1780879321070!5m2!1sen!2sgh"
             width="100%" 
             height="100%" 
             style="border:0;" 
             allowfullscreen="" 
             loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
             class="grayscale hover:grayscale-0 transition-all duration-500"
           ></iframe>
         </div>
